@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Danslesbois",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	//"postCreateCommand": "sudo apt-get update && sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-extra-utils && sudo tlmgr install enumitem xifthen ifmtarg sourcesanspro tcolorbox tikzfill",
+	"features": {
+		"ghcr.io/prulloac/devcontainer-features/latex:1": {
+			"scheme": "medium",
+			"mirror": "https://mirror.ctan.org/systems/texlive/tlnet/"
+		},
+		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+			"plugins": "git docker colored-man-pages zsh-autosuggestions zsh-syntax-highlighting",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting",
+			"username": "vscode"
+		},
+		"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+			"setLocale": true,
+			"theme": "agnoster",
+			"desiredLocale": "en_US.UTF-8 UTF-8"
+		}
+	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/prulloac/devcontainer-features/latex",
+		"ghcr.io/nils-geistmann/devcontainers-features/zsh",
+		"ghcr.io/devcontainers-extra/features/zsh-plugins"
+	],
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
