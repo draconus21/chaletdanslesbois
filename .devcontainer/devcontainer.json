@@ -8,7 +8,8 @@
 	"features": {
 		"ghcr.io/prulloac/devcontainer-features/latex:1": {
 			"scheme": "medium",
-			"mirror": "https://mirror.ctan.org/systems/texlive/tlnet/"
+			"mirror": "https://mirror.ctan.org/systems/texlive/tlnet/",
+			"packages": "fontawesome,twemojis"
 		},
 		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
 			"plugins": "git docker colored-man-pages zsh-autosuggestions zsh-syntax-highlighting",
