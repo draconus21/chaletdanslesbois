@@ -1,150 +1,214 @@
-\documentclass{article}
+\documentclass[11pt,a4paper]{article}
 
-\usepackage{twemojis}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{pifont}
 
-\newcommand{\chalet}{Chalet dans les bois}
+\graphicspath{{/workspaces/chaletdanslesbois/graphics}}
+% Define colors
+\definecolor{forestgreen}{RGB}{34, 73, 53}
+\definecolor{skybluescript}{RGB}{74, 144, 226} % Approximation of the blue script color
 
-\title{\chalet - Essential Guest Guide}
+% Define logo
+\newcommand{\chaletlogo}[1]{
+    \includegraphics[width=#1\textwidth]{logo.png}
+}
 
-\newcommand*{\warnsign}{\begin{LARGE}\texttwemoji{warning}\end{LARGE}}
+% Manual section styling
+\newcommand{\mysection}[1]{
+    \vspace{1.5em}
+    {\color{skybluescript}\huge\bfseries\itshape #1}
+    \vspace{1em}
+    \newline
+}
 
-\newcommand{\separator}{\vspace{2em}\hrule}
-\newcommand*{\subhead}[2]{\noindent\textbf{#1}: {#2}\vspace{1em}}
-\newcommand*{\subsubhead}[2]{\noindent\textbf{#1}: {#2}\vspace{0.25em}}
-\newcommand*{\note}[1]{\textbf{Note}: {#1}}
-\newcommand*{\warning}[1]{\warnsign \ \textbf{#1} \warnsign}
+% Custom commands
+\newcommand{\checkitem}{\ding{51}}
+\newcommand{\warnsign}{\textbf{\color{red}(!)}}
+\newcommand{\separator}{\vspace{1em}\hrule\vspace{1em}}
+
 \begin{document}
-\maketitle
 
-Welcome to our home! Here's everything you need to know for a comfortable stay.
+% --- PAGE 1: COVER ---
+\begin{center}
+    \vspace*{\fill}
+    \chaletlogo{1.0}
+
+    \vspace{2em}
+    {\Huge\bfseries\color{forestgreen} CHALET DANS LES BOIS}
+
+    \vspace{4em}
+    {\large Welcome to our forest retreat! Here's everything you need to know for a comfortable stay.}
+
+    \vspace*{\fill}
+    \hrule
+\end{center}
+
+
+% --- PAGE 2: ARRIVAL & ACCESS ---
+\mysection{Arrival \& Access}
+
+\begin{minipage}[t]{0.9\textwidth}
+    \vspace{0pt}
+    \textbf{Address:} 423 Avenue Lafond, Chertsey, J0K 3K0 \\
+    \textit{Note: GPS may indicate arrival early - continue to the last cottage on your left before the roundabout}
+
+    \vspace{1em}
+    \textbf{Parking:} Two spots available - choose the sloped or level spot near the outdoor fireplace area. \\
+    \warnsign \ \textbf{DO NOT park behind the "No Entry" sign - septic tank area}
+
+    \vspace{1em}
+    \textbf{Entry:} Use your unique door code.\\
+    \textit{During the winter, the cold air can cause the door frame to settle tightly. If the keypad blinks red after you enter your code, don't worry! Just pull the door firmly toward you and hold it there while you re-enter the code. This aligns the lock perfectly and it should click right open.}
+
+    \vspace{1em}
+    \textbf{Shoes:} No shoes policy - leave by entrance door
+
+    \vspace{1em}
+    \textbf{WiFi:} danslesbois, password: streliski\\
+    \textit{Cell phone reception can be unreliable at the chalet. Please save the WiFi details before arrival in case you need to contact us upon arrival.}
+
+\end{minipage}
+%\begin{minipage}[t]{0.35\textwidth}
+%    \vspace{0pt}
+%    \centering
+%    \includegraphics[width=\textwidth]{keypad.jpg}
+%    \vspace{2em}
+%\end{minipage}
 
 \separator
-\section*{Arrival \& Access}
 
-\subhead{Address} {
-    423 Avenue Lafond, Chertsey, J0K 3K0.
-    \\
-    \note{GPS may indicate arrival early - continue to the last cottage on your left before the roundabout.}
-}
+\mysection{Essential Amenities and Safety}
 
-\subhead{Parking} {
-    Two spots available - choose between the sloped pot or level spot near the outdoor fireplace area.
-    \\
-    \warning{DO NOT park behind the "No Entry" sign - septic tank area.}
-}
-
-\subhead{Check-in} {4:00 PM}\\
-\subhead{Check-out} {12:00 PM}\\
-\subhead{Door Access} {Use your unique code.}\\
-\subhead{Wifi} {Connect to the network ``danslesbois'' with the password ``streliski''.}
-
-\separator
-\section*{Essential Amenities and Safety}
-\subhead{Septic Tank} { We have a fully sealed septic tank.
-    \begin{itemize}
-        \item A red indicator light near the hot tub area will illuminate if the septic tank at its 80\% capacity.
-        \item Please notify us immediately if you notice this warning light during your stay.
-    \end{itemize}
-}
-
-\subhead{Hot Tub} { Enjoy the hot tub located on the deck. Please follow these rules:
-    \begin{itemize}
-        \item Shower before entering the hot tub.
-        \item No glassware in the hot tub area. Use the plastic glasses provided (in the coat closet).
-        \item Keep the cover on when not in use.
-        \item Set the temperature to 99\textdegree F upon arrival (takes a few hours to heat up from 80\textdegree F.)
-        \item \textbf{Children must be supervised at all times.}
-    \end{itemize}
-}
-
-\subhead{Safety} {
-    \begin{itemize}
-        \item \textbf{First Aid Kit} is located in the bathroom dresser.
-        \item \textbf{Fire Extinguisher} is located by the indoor fireplace.
-        \item \textbf{Fire Blanket} is located in the over drawer.
-    \end{itemize}
-}
-
-\subhead{Kitchen \& Supplies}
-{
-    \newline\newline
-    \subsubhead{Provided}{Coffee, Nespresso capsules, tea, spices, cooking essentials, cleaning products, towels, toiletries.}
-    \\\subsubhead{Bring}{Beach towels, sunscreen, and any personal items you may need.}
-    \\\subsubhead{Equipment}{Full kitchen, washer/dryer, and outdoor propane grill.}
-    \\\subsubhead{Bedding}{Clean sheets provided; extra sheets in master bedroom armoire.}
-    \\\subsubhead{Miscellaneous}{Some board game are available for use.}
-    \\\subsubhead{Waste and Recycling}{Fresh bags provided; extras under the kitchen sink.}
-}
-
-\subhead{Fireplaces} {
-    Wood is provided for both indoor and outdoor fireplaces.
-    \\\warning{Never leave a fire unattended.}
-    \newline\newline
-    \subsubhead{Indoor Fireplace}{
-        \\Empty ashes into the black bucket between uses.
-        \\Always completely extinguish the fire by closing the door and airflow vent before leaving/sleeping.
-    }
-    \\\subsubhead{Outdoor Fire Pit}{
-        \\Check SOPFEU website for firebans first.
-        \\Extinguish the fire completely before going inside/leaving.
-    }
-}
-\section{House Rules}
+\textbf{Septic Tank}
 \begin{itemize}
-    \item No smoking inside the chalet.
-    \item No shoes inside the chalet. Please leave them at the entrance.
-    \item Please respect the neighbors and keep noise at a respectful level.
-    \item \textbf{Quiet hours} are from 11:00 PM to 8:00 AM.
-    \item \textbf{No parties are allowed.}
-    \item \textbf{Fireworks are not allowed.}
-    \item Dispose of trash in designated bins.
+    \item Since all wastewater goes into a sealed septic tank, please be mindful of your water use.
+    \item A red indicator light near the hot tub will illuminate when the septic tank reaches 80\% capacity
+    \item Please notify us immediately if you notice this warning light is on
+\end{itemize}
+
+\textbf{Hot Tub}
+\begin{itemize}
+    \item Set to 99°F upon arrival (takes a few hours to heat up from 80°F)
+    \item Keep cover on when not in use
+    \item No glass containers - use provided plastic cups
+    \item \textbf{Children require adult supervision at all times}
+\end{itemize}
+
+
+% --- PAGE 3: SAFETY & KITCHEN ---
+\textbf{Safety Equipment}
+\begin{itemize}
+    \item First aid kit: bathroom dresser drawer
+    \item Fire blanket: oven drawer
+    \item Small extinguisher: entry closet
+    \item Child safety gates at 3rd floor stairs and 2nd bedroom
+\end{itemize}
+
+\vspace{1em}
+\noindent\textbf{Kitchen \& Supplies}
+\begin{description}
+    \item[\textbf{Provided}:] Coffee, Nespresso capsules, tea, spices, cleaning products, towels, toiletries
+    \item[\textbf{Bring}:] Beach towels
+    \item[\textbf{Equipment}:] Full kitchen, washer/dryer, BBQ (propane)
+    \item[\textbf{Bedding}:] Clean sheets provided; extras in master bedroom armoire
+    \item[\textbf{Waste and Recycling}:] Fresh bags provided; extras under sink
+\end{description}
+
+\separator
+
+\mysection{Fireplaces and Outdoor fires}
+
+\textbf{Indoor Fireplace}
+\begin{itemize}
+    \item Wood and starters provided
+    \item Empty ashes into black bucket between uses
+    \item \textbf{Always close door and airflow before leaving/sleeping}
+\end{itemize}
+
+\textbf{Outdoor Fire Pit}
+\begin{itemize}
+    \item Check \href{https://sopfeu.qc.ca}{SOPFEU website} for fire bans first
+    \item Wood provided in rack
+    \item \textbf{Extinguish completely before going inside}
 \end{itemize}
 
 \separator
-\section{Departure Checklist}
-The departure procedure is simple: leave the chalet as it was upon arrival!
 
-With the following exceptions:
+\mysection{Miscellaneous}
 \begin{itemize}
-    \item \subsubhead{Sheets}{Place used sheets in the laundry hamper in the bathroom (no need to make the beds)}
-    \item \subsubhead{Trash}{Empty all bins to outside containers}
-    \item \subsubhead{Kitchenware}{Wash and put away all dishes, utensils, and cookware.}
-    \item \subsubhead{Hot Tub}{Reset the temperature to 80\textdegree F and ensure that the cover is on.}
-    \item \subsubhead{Miscellaneous}{Turn off all lights and TVs, close all windows, and set the heating to 18\textdegree C.}
-    \item \subsubhead{Outdoor}{Bring cushions for outdoor seating in, cover the BBQ.}
-    \item \subsubhead{Door}{Press the ``lock'' button on the keypad while pulling firmly on the door. Ensure that the door is locked before leaving.}
+    \item If the primary bedroom window sticks, gently push it open after temporarily removing the net
 \end{itemize}
-\warnsign \textbf{  Additional fees will apply for any damages or excessive cleaning required.}
+
+
+% --- PAGE 4: RULES & DEPARTURE ---
+\mysection{Quiet Hours and Rules}
+\begin{itemize}
+    \item No parties allowed
+    \item \textbf{Quiet hours: 11:00 PM - 8:00 AM}
+    \item Music at respectful volume only
+    \item No fireworks
+\end{itemize}
+%\separator
+
+\mysection{Departure Checklist}
+\textbf{Our checkout process is simple - Please leave the chalet as you found it, with these additional steps:}
+
+\begin{itemize}
+    \item[\checkitem] \textbf{Sheets:} Place used sheets in the laundry hamper in the bathroom (no need to make the beds)
+    \item[\checkitem] \textbf{Fridge:} Remove all perishable items from the fridge (please help yourself to the takeaway containers in the the kitchen)
+    \item[\checkitem] \textbf{Trash:} Empty all bins to outside containers
+    \item[\checkitem] \textbf{Dishes:} Wash and put away all used items
+    \item[\checkitem] \textbf{Hot tub:} Reset to 80°F (90°F in winter), replace cover
+    \item[\checkitem] \textbf{Utilities:} Turn off lights, close windows, set heat to 15°C
+    \item[\checkitem] \textbf{Outdoor:} Bring in cushions, cover BBQ
+    \item[\checkitem] \textbf{Door:} Press the keypad's lock button and pull firmly on the handle while the door locks; press the button once more---a green light means it's secured
+\end{itemize}
+
+\vspace{1em}
+\warnsign \ \textbf{Excessive cleaning or damage/missing items will incur additional fees.}
 
 \separator
-\section{Nearby Attractions (Top picks)}
-\subhead{Sainte-Marguerite-du-Lac-Masson (15 mins)}{}
+
+
+% --- PAGE 5: NEARBY ACTIVITIES ---
+\mysection{Nearby Activities (Top Picks)}
+
+\textbf{Sainte-Marguerite-du-Lac-Masson (15 min)}
 \begin{itemize}
-    \item \subsubhead{Plage du Lac Masson}{Municipal beach}
-    \item \subsubhead{Pub Marina Masson}{Restaurant and boat rentals}
-    \item \subsubhead{Cafe O'Marguerite}{Quaint cafe with local pastries}
+    \item Municipal Beach du Lac Masson
+    \item Pub Marina Masson (boat rentals)
+    \item Café aux Marguerites
 \end{itemize}
 
-\subhead{Chertsey}{}
+\textbf{Chertsey}
 \begin{itemize}
-    \item \subsubhead{Parc régional de la Forêt Oureau (30 mins)} {hiking, climbing, canoeing, paddle boarding, obstacle course, biking, cross-country skiing, snowshoeing, tubing}
-    \item \subsubitem{Saint Urbain Family Camp}{Swimming}
+    \item \href{https://www.parcsregionaux.org/parcs-regionaux/parcs/parc-regional-de-la-foret-ouareau/}{Parc régional de la Forêt Ouareau} (hiking, canoeing, biking)
+    \item Saint Urbain Family Camp (swimming)
 \end{itemize}
 
-\subhead{Day Trips}{}
+\textbf{Day Trips}
 \begin{itemize}
-    \item \subsubhead{Saint-Sauver (35 mins)}{Sommet Saint-Sauveur water slides/skiing; Shopping and dining}
-    \item \subsubhead{Rawdon (25 mins)}{Arbraska adventure park, waterfalls}
-    \item \subsubhead{Saint Donat (30 mins)}{Municipal beach, mountain biking trails}
+    \item \textbf{Forêt Ouareau (30 mins):} hiking, climbing, canoeing, paddle boarding, obstacle course, biking, cross-country skiing, snowshoeing, tubing
+    \item \textbf{Saint-Sauveur (35 min):} Sommet Saint-Sauveur water slides/skiing
+    \item \textbf{Rawdon (25 min):} \href{https://arbraska.com/en/parks/rawdon/}{Arbraska adventure park}, waterfalls
+    \item \textbf{Saint-Donat (30 min):} Municipal beach, mountain biking trails
 \end{itemize}
+
+\vfill
 
 \separator
-\section*{}
+\vspace{1em}
+\textbf{Have questions? Check the full house guide or contact your hosts.}
 
-\textbf{Have questions? } \textit{Feel free to reach out to us anytime!}\\
+Enjoy your stay at Chalet dans les bois! \\
 
-Enjoy your stay at \chalet!\\
-
-Neeth, Ewa \& Eugine
+- Neeth, Ewa \& Eugine
 
 \end{document}
