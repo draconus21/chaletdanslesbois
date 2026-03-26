@@ -1,0 +1,35 @@
+\ProvidesPackage{chalet_style}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{pifont}
+
+\graphicspath{{/workspaces/chaletdanslesbois/graphics}}
+
+% Define colors
+\definecolor{forestgreen}{RGB}{34, 73, 53}
+\definecolor{skybluescript}{RGB}{74, 144, 226} % Approximation of the blue script color
+
+% Define logo
+\newcommand{\chaletlogo}[1]{
+    \includegraphics[width=#1\textwidth]{logo.png}
+}
+
+% Manual section styling
+\newcommand{\mysection}[1]{
+    \vspace{1.5em}
+    {\color{skybluescript}\huge\bfseries\itshape #1}
+    \vspace{1em}
+    \newline
+}
+
+% Custom commands
+\newcommand{\checkitem}{\ding{51}}
+\newcommand{\warnsign}{\textbf{\color{red}(!)}}
+\newcommand{\separator}{\vspace{1em}\hrule\vspace{1em}}
