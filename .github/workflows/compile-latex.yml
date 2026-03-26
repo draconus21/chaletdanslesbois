@@ -22,12 +22,12 @@ jobs:
       - name: Compile LaTeX document (${{ matrix.language }})
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: essential_${{ matrix.language }}.tex
+          root_file: tldr_${{ matrix.language }}.tex
           working_directory: src
           args: "-pdf -interaction=nonstopmode -halt-on-error"
 
       - name: Upload PDF artifact (${{ matrix.language }})
         uses: actions/upload-artifact@v4
         with:
-          name: essential_${{ matrix.language }}_pdf
-          path: src/essential_${{ matrix.language }}.pdf
+          name: tldr_${{ matrix.language }}_pdf
+          path: src/tldr_${{ matrix.language }}.pdf
