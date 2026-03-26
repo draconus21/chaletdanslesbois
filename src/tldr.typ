@@ -21,7 +21,7 @@
 )
 
 #set text(
-  font: "Linux Libertine",
+  font: "New Computer Modern",
   size: 11pt,
 )
 
@@ -48,13 +48,13 @@
 // --- PAGE 1: COVER ---
 #align(center + horizon)[
   #chaletlogo(width: 50%)
-  
+
   #v(2em)
   #text(fill: forestgreen, size: 3em, weight: "bold")[CHALET DANS LES BOIS]
-  
+
   #v(4em)
   #text(size: 1.2em)[#tr("cover_welcome")]
-  
+
   #v(1fr)
   #line(length: 100%)
 ]
