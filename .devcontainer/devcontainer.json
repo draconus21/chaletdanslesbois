@@ -15,11 +15,7 @@
 
 
 	"features": {
-		"ghcr.io/prulloac/devcontainer-features/latex:1": {
-			"scheme": "medium",
-			"mirror": "https://mirror.ctan.org/systems/texlive/tlnet/",
-			"packages": "twemojis"
-		},
+		"ghcr.io/michidk/devcontainers-features/typst:1": {},
 		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
 			"plugins": "git docker colored-man-pages zsh-autosuggestions zsh-syntax-highlighting",
 			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting",
@@ -31,11 +27,6 @@
 			"desiredLocale": "en_US.UTF-8 UTF-8"
 		}
 	},
-	"overrideFeatureInstallOrder": [
-		"ghcr.io/prulloac/devcontainer-features/latex",
-		"ghcr.io/nils-geistmann/devcontainers-features/zsh",
-		"ghcr.io/devcontainers-extra/features/zsh-plugins"
-	],
 	// Configure tool-specific properties.
 	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
