@@ -5,6 +5,15 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	//"postCreateCommand": "sudo apt-get update && sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-extra-utils && sudo tlmgr install enumitem xifthen ifmtarg sourcesanspro tcolorbox tikzfill",
+	// GEMINI install
+	// curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+	// export NVM_DIR="$HOME/.nvm"
+	// [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	// [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+	// nvm install --lts
+	// npm install -g @google/gemini-cli
+
+
 	"features": {
 		"ghcr.io/prulloac/devcontainer-features/latex:1": {
 			"scheme": "medium",
