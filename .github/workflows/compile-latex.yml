@@ -20,7 +20,7 @@ jobs:
       - name: Compile LaTeX document (${{ matrix.language }})
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: src/essential_${{ matrix.language }}.tex
+          root_file: essential_${{ matrix.language }}.tex
           working_directory: src
           args: "-pdf -interaction=nonstopmode -halt-on-error"
 
