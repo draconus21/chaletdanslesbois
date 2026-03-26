@@ -46,16 +46,19 @@
 #let checkitem = [✓]
 
 // --- PAGE 1: COVER ---
+#show title: set text(fill: forestgreen)
+
 #align(center + horizon)[
-  #chaletlogo(width: 50%)
+  #v(1fr)
+  #chaletlogo(width: 75%)
 
   #v(2em)
-  #text(fill: forestgreen, size: 3em, weight: "bold")[CHALET DANS LES BOIS]
+  #title[CHALET DANS LES BOIS]
 
   #v(4em)
   #text(size: 1.2em)[#tr("cover_welcome")]
 
-  #v(1fr)
+  #v(2fr)
   #line(length: 100%)
 ]
 
