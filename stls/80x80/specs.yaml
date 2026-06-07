@@ -1,0 +1,3 @@
+image_size: 80 # mm
+qr_code_height: 1.5 # mm
+base_height: 2 # mm
