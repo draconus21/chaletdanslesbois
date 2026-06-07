@@ -4,9 +4,12 @@
 	"name": "Danslesbois",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"initializeCommand": "mkdir -p .devcontainer/antigravity-session",
 	"postCreateCommand": "chmod +x ./.devcontainer/install-gemini.sh && ./.devcontainer/install-gemini.sh",
 
-
+	"mounts": [
+		"source=${localWorkspaceFolder}/.devcontainer/antigravity-session,target=/home/vscode/.gemini,type=bind"
+	],
 	"features": {
 		"ghcr.io/michidk/devcontainers-features/typst:1": {},
 		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
@@ -19,9 +22,5 @@
 			"theme": "agnoster",
 			"desiredLocale": "en_US.UTF-8 UTF-8"
 		}
-	},
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	}
 }
